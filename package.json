@@ -1,7 +1,7 @@
 {
   "name": "vs-buddy",
   "displayName": "VS-Buddy",
-  "description": "",
+  "description": "Track your VS Code usage time and view session statistics",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.98.0"
@@ -9,13 +9,19 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "vs-buddy.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "vs-buddy.showUsage",
+        "title": "Show Usage Statistics"
       }
     ]
   },
